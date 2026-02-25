@@ -1,0 +1,1 @@
+powershell.exe -file KeepAwake.ps1
