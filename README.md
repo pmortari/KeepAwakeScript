@@ -20,7 +20,7 @@ This repository contains lightweight implementations that keep your computer awa
 
 A PowerShell implementation that:
 - Creates a WScript.Shell COM object to send keyboard inputs
-- Sends a Shift+F15 key combination every 45-85 seconds (random interval)
+- Sends a Shift+F15 key combination every 55-85 seconds (random interval)
 - Runs in an infinite loop until manually terminated
 
 **Requirements:**
@@ -39,7 +39,7 @@ Or run directly in PowerShell:
 
 ### `KeepAwake.bat` (Batch Script Version)
 
-A batch file wrapper version for quick execution from Command Prompt or Windows Explorer. This is a convenient way to run the PowerShell script without having to navigate to the directory or adjust execution policies.
+A batch file wrapper version for quick execution from Command Prompt or Windows Explorer. This is a convenient way to run the PowerShell script without having to open a PowerShell window manually.
 
 **Usage:**
 ```cmd
@@ -87,7 +87,7 @@ All implementations operate on the same principle:
 
 1. **Input Simulation**: They simulate keyboard input to wake the system
 2. **Key Combination**: Sends a Shift+F15 key press (a non-printable function key that won't interfere with your work)
-3. **Random Timing**: Waits between 45-85 seconds before sending the next input, randomized to seem more natural
+3. **Random Timing**: Waits a randomized interval before sending the next input (55-85 seconds for PowerShell; 45-84 seconds for .NET), to seem more natural
 4. **Continuous Loop**: Repeats indefinitely until the application is stopped
 
 This approach prevents:
